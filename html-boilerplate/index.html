@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>first</title>
+  </head>
+
+  <body>
+    <!-- links to another page or html file -->
+    <a href="menu.html" title="Link">goes to the second page</a>
+
+    <!-- there are 6 headers -->
+    <h1>Thanksgiving</h1>
+    <!-- paragraphs correspond to real writing components -->
+    <p>
+      Today is Thanksgiving in America. Thanksgiving is on the 4th Thursday of
+      every <strong>November.</strong>
+    </p>
+
+    <!-- paragraphs/elements are needed to create line breaks between sections-->
+    <p>
+      Thanksgiving celebrates the sharing of food and culture of the
+      <!-- b/strong - bold
+           i/em - italics
+       -->
+      <em>pilgrims</em>. What is <i>i is for italic</i>.
+
+      <b> b is for bold.</b>
+
+      <!-- mark (highlight), small, del(ete), ins(ert), sub(script), sup(erscript) -->
+      <mark> mark is for marked, meaning highlighted</mark>
+      <small> small is for smaller</small>
+      <del> del is for deleted which is strikethrough </del>
+      <ins> ins is for inserted which is underlined</ins> test
+      <sub> sub is for subscript</sub>
+      <sup> sup is for superscript</sup>
+    </p>
+    <!-- comments don't add line breaks -->
+    <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+    <h3>Foods:</h3>
+    <p>
+      What are some foods that commonly associated with thanks giving in the
+      21st century?
+    </p>
+
+    <!-- lists come in 3 flavors
+         1. unordered list (ul) - list item (li)
+            * note: `menu` does the same
+         2. ordered list (ol) - list item (li)
+         3. description list (dl) - description term (dt), description definition (dd)
+
+         props
+         * [all] `list-style-type`/`type` (inline) for markers
+         * [ol] `reversed` whether numbers go in reverse
+         * [ol] `start` what number to start on
+         * [all] `display = inline-block`/`inline` - to make the list horizontal
+      -->
+    <ul>
+      <li>this is an unordered list</li>
+      <li>pumpkin pie</li>
+      <li>turkey</li>
+      <li>apple cider</li>
+      <li>
+        nested
+        <ul type="square">
+          <li>something</li>
+          <li>set the list bullet style with "list-style-type" css</li>
+        </ul>
+      </li>
+    </ul>
+
+    in order of important, we use an ordered list
+    <ol reversed>
+      <li>turkey is definitely what people think of first</li>
+      <li>the turkey is eaten with cranberry sauce for some reason</li>
+      <li>
+        nested list
+        <ul>
+          <li>poop</li>
+          <li>scoop</li>
+        </ul>
+      </li>
+    </ol>
+    <ol start="999" type="I">
+      <li type="i">hi</li>
+      <li>bye</li>
+    </ol>
+    <!-- menu does the same as an unordered list -->
+    <menu>
+      <li><button>hi</button></li>
+      <li><button>bye</button></li>
+    </menu>
+    here's one more fun one called description list
+    <dl>
+      <dt>an item - dt is description term</dt>
+      <dd>description</dd>
+      <dt>another item</dt>
+      <dt>a third item</dt>
+      <dd>description</dd>
+      <dt>one item</dt>
+      <dd>two</dd>
+      <dd>dd is description definition</dd>
+      <dt>list-style-type</dt>
+      <dt>list-style-position</dt>
+      <dd>
+        two properties that control the item marker and item wrapping.
+        "list-style-type" and "list-style-position". "outside" does not allow
+        wrapping while "inside" does. Additionally, the two can be combined to
+        become "list-style"
+      </dd>
+    </dl>
+    <h3>configuring your own list marker</h3>
+    <p>
+      you can configure your own list marker when the provided types aren't
+      enough. To do that:
+    </p>
+    <ol>
+      <li>remove the marker by setting `list-style-type` to "none"</li>
+      <li>add an image in place using the `background` css</li>
+      <li>
+        choose location and padding to provide space to the left of the text
+      </li>
+    </ol>
+
+    <h3>horizontal displaying list</h3>
+    <p>
+      another thing we can do is orient the list horizontally. The main ways to
+      do this are the following, with props set on the list items, not the list
+      itself.
+    </p>
+    <ul>
+      <li>setting the `display` property to `inline` or `inline-block`</li>
+      <ul>
+        <li>
+          note: `inline-block` preferred since you can set other props like
+          vertical margin. The item marker is auto removed when we set to
+          inline/inline-block.
+        </li>
+      </ul>
+      <li>float the list items to keep the list item marker</li>
+    </ul>
+
+    inline-block list
+    <ol>
+      <li style="display: inline-block; margin: 0 10px">left</li>
+      <li style="display: inline-block; margin: 0 10px">middle</li>
+      <li style="display: inline-block; margin: 0 10px">right</li>
+    </ol>
+    floating list
+    <ol style="list-style-type: decimal-leading-zero">
+      <li style="float: left; margin: 0 15px">left</li>
+      <li style="float: left; margin: 0 15px">middle</li>
+      <li style="float: left; margin: 0 15px">right</li>
+    </ol>
+    <br />
+    <h1>important holidays</h1>
+    <p>thanksgivign is considered an <strong>important</strong> holiday</p>
+  </body>
+</html>

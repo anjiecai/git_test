@@ -1,0 +1,62 @@
+<!--
+  1. links to pages on other websites
+  2. links to other pages on own website
+  3. absolute vs relative links
+     * absolute - links to pages on other websites
+       * scheme://domain/path 
+     * relative - links to other pages within own website
+       * e.g. relative to the page you're on
+  4. display images - <img> (void element)
+  -->
+
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <title>Links</title>
+  </head>
+
+  <body>
+    <h1>Homepage</h1>
+    <!-- anchor elements <a> are used to create links and wrap around text or another HTML element
+         "anchors" to another destination, aka requires the other location specified
+         
+         attributes:
+         * href (hypertext reference) - controls where to go, absolute or relative link to resource
+         * target - controls where the linked resource will be opened
+           - `_self` is current tab (default)
+           - `_blank` is new tab or window (based on browser settings)
+         * rel (relationship) - describes relationship between current page and linked document
+           - `noopener` prevents the new page from accessing current page window object and parent frame, aka making edits
+           - `noreferrer` prevents opened link from knowing the referrer
+           - see https://owasp.org/www-community/attacks/Reverse_Tabnabbing
+      -->
+    <!-- note: not including https wil cause it to look locally -->
+    <a
+      href="https://www.theodinproject.com/about"
+      target="_blank"
+      rel="noopener
+      noreferrer"
+    >
+      About The Odin Project
+    </a>
+
+    <!-- this is a relative link, relative to the folder structure -->
+    <a href="./pages/about.html">About</a>
+
+    <!-- image tag
+      * null/self closing, e.g. no closing end tag
+      * attributes
+        - [needed] `src` - location of the resource
+        - [needed] `alt` - alternative text
+        - [optional] `width/length` - size of the image
+      -->
+    <br />
+    <img
+      src="https://www.theodinproject.com/mstile-310x310.png"
+      alt="the odin project logo"
+      width="100"
+      height="100"
+    />
+  </body>
+</html>
